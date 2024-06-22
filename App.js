@@ -30,7 +30,7 @@ const App = () => {
   const searchWeather = (location) => {
     setStatus('loading');
     axios
-      .get(`${BASE_URL}?q=${location}&appid=${API_KEY}`) // Gunakan API_KEY dari '@env'
+      .get(`${BASE_URL}?q=${location}&appid=${API_KEY}`) 
       .then((response) => {
         const data = response.data;
         data.visibility /= 1000;
